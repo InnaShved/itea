@@ -140,50 +140,50 @@
 // Написати функцію, яка прийматиме об'єкт, будуватиме з нього привітання і повертатиме стрінг.
 // Наприклад:
 
-const guestList = {
-    Randy: "Germany",
-    Karla: "France",
-    Wendy: "Japan",
-    Norman: "England",
-    Sam: "Argentina"
-}
+// const guestList = {
+//     Randy: "Germany",
+//     Karla: "France",
+//     Wendy: "Japan",
+//     Norman: "England",
+//     Sam: "Argentina"
+// }
 
 // greeting("Randy") ➞ "Hi! I'm Randy, and I'm from Germany."
 // greeting("Sam") ➞ "Hi! I'm Sam, and I'm from Argentina."
 // greeting("Monti") ➞ "Hi! I'm a guest.
 // Якщо переданого імені немає в об'єкті, то виводимо "Hi! I'm a guest."
 
-function greeting(name) {
-    let str = "";
-    if ( name in guestList){
-        str = "Hi! I'm " + name + ", and I'm from " + guestList[name] + ".";
-    } else {
-        str = "Hi! I'm a guest.";
-    }
-    return str;
-}
-console.log (greeting("Randy"));
+// function greeting(name) {
+//     let str = "";
+//     if ( name in guestList){
+//         str = "Hi! I'm " + name + ", and I'm from " + guestList[name] + ".";
+//     } else {
+//         str = "Hi! I'm a guest.";
+//     }
+//     return str;
+// }
+// console.log (greeting("Randy"));
 
 
 
 
 // --11-------
-// function countAll(str) {
-//     let obj = {
-//         letters: 0,
-//         digits: 0,
-//     };
+function countAll(str) {
+    let obj = {
+        letters: 0,
+        digits: 0,
+    };
 
-//     for (i = 0; i < str.length; i++) {
-//         if ( +str[i]) {
-//             obj.digits++;
-//         } else  if (str[i] === " ") {
-            
-//         } else {
-//             obj.letters++;
-//         }
-//     }
-//     return (obj);
-// }
-// console.log (countAll("Hello World"));
-// console.log (countAll("H3ll8 Wor1d"));
+    for (i = 0; i < str.length; i++) {
+        if ( +str[i]) {
+            obj.digits++;
+        } else  if (str[i] === " ") {
+            continue;
+        } else {
+            obj.letters++;
+        }
+    }
+    return (obj);
+}
+console.log (countAll("Hello World"));
+console.log (countAll("H3ll8 Wor1d"));
